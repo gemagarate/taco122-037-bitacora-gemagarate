@@ -1,1 +1,22 @@
+estructura array- siempre se parte del numero 0.
+// int myPins[] = {2,4,8,3,6,4};
+como utilizar pantalla
+utilizamos la pantalla oled
+128x64 cantidad de pixeles y resolucion de la pantalla
+relacion de aspecto 2 es a 1
+- protocolos: ( formas que tienen las maquinas de comunicarse entre ella)
+ejm : usb/serial
+SSD1306 - controlador
+se comunica via interfaz i2c
+driagrama de flujo seria:
+ARDUINO - CONTROLADO SSD13066- PANTALLA
+la comunicacion entre el arduino y el controlado se llama i2c
+QUE SE  NECESITA PARA HACER UNA COMUNICACION I2C
+SE NECESITA: 4 pines - scl- sda
+scl significa= s.clock 
+sda= s.data
+i2c- segunda caracteristica- nose
+para aprender a utilizar las pantallas debemos aprender a utilizar bibliotecas en arduino
+Adafruit SSD1306
+
 
