@@ -20,3 +20,9 @@ para aprender a utilizar las pantallas debemos aprender a utilizar bibliotecas e
 Adafruit SSD1306
 
 
+para añadir imagen podemos usar IMAGE2CPP
+PARA Q NOS ADAPTE LA IMAGEN.
+en scaling proporcionamos la imagen
+generamos codigo.
+canvas size 128x64
+
