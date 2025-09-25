@@ -1,0 +1,31 @@
+trabajaremos el orden de una estructura
+ejm en app de arduino
+1 declarar variable= definir donde guardare mi info.
+  se llama DECLARAR
+que necesito para declarar la variable
+* el tipo
+el tipo de variable es el tipo de almacenamiento (numero pequeño, numero grande, si o no)
+
+si tiene comas se usa String
+si son si o no boll
+en general se hace antes del setup.
+para que se usa el setup-
+  palabra clave: inicializar , preparar lo que luego sera utilizado.
+en el setup se decide si los pines van a ser intputs o outputs
+si recibo info e afuera, donde se recibe.
+  ejem
+  pinMode(pinLed, OUTUT)
+RECORDAR que los analogin no deben ser inicializados como entradas.
+
+
+  En el void loop
+usar variable para guardar la info del mundo.
+informacion=analogRead(A0);
+
+es mayor o menor
+quiero q sea proporcional al rango
+quiero saber en q lugar esta
+
+
+
+
