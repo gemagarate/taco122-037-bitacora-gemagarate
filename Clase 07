@@ -27,5 +27,22 @@ quiero q sea proporcional al rango
 quiero saber en q lugar esta
 
 
+TRABAJAREMOS CON LA CAMARA DEL PC EN PROCESSING.
+
+
+CAPTURE CAM/ NO ES UNA variable, es una clase de tipo "Capture"
+
+capture list, es para guardar la lista de camaras q estan conectadas en el compurador.
+ejemplo chat gpt del rpofe con letras.
+es el mismo setup
+se creo una variable que se llama step
+
+
+
+
+
+
+
+
 
 
