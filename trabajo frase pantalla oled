@@ -1,0 +1,57 @@
+#include <Wire.h>
+#include <Adafruit_GFX.h>
+#include <Adafruit_SSD1306.h>
+
+// Tamaño de pantalla OLED
+#define SCREEN_WIDTH 128
+#define SCREEN_HEIGHT 64
+
+// Crear objeto de pantalla
+Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1);
+
+// Frase a mostrar
+String frase = "el cuerpo ya no es un sujeto con identidad, sino un contenedor de deseos ajenos, una mercancia, un residuo visual";
+
+int x; // posición horizontal del texto
+
+void setup() {
+  // Inicializar pantalla
+  if (!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) { // dirección I2C común
+    for (;;); // si no se detecta, queda detenido
+  }
+
+  display.clearDisplay();
+  display.setTextSize(1);
+  display.setTextColor(SSD1306_WHITE);
+  display.setTextWrap(false);
+
+  // La posición inicial del texto es fuera de la pantalla (a la derecha)
+  x = SCREEN_WIDTH;
+}
+
+void loop() {
+  display.clearDisplay();
+
+  // Mostrar texto desplazándose
+  display.setCursor(x, 30); // posición vertical fija (mitad de la pantalla)
+  display.print(frase);
+  display.display();
+
+  // Mover texto hacia la izquierda
+  x--;
+
+  // Si todo el texto salió por la izquierda, reinicia
+  int textWidth = frase.length() * 6; // aprox. 6px por carácter
+  if (x < -textWidth) {
+    x = SCREEN_WIDTH;
+  }
+
+  // Efecto de desvanecimiento progresivo cuando el texto se acerca al final
+  if (x < 0) {
+    int fade = map(x, -textWidth, 0, 0, 255); // valor de opacidad simulado
+    analogWrite(9, fade); // puedes usar un pin con PWM si quieres sincronizar con LED
+  }
+
+  delay(30); // controla la velocidad del desplazamiento (menor = más rápido)
+}
+// este codigo fue creado con la ayuda de char gpt.
