@@ -1,0 +1,112 @@
+* Crear una cuenta
+* comprar kit electronica
+* crear una frase
+*github- (octocat) crear cuenta
+- gimp ( photoshop gratis)
+subir bitacora a la plataforma
+//codigo binario 0 y 1
+lenguaje base a dos elementos 
+clave wifi - Red.Univ.chile 
+lenguaje ensamblador 
+- interprete = c
+c (lenguaje de programmacion)
+java- simplificacion de c 
+prossecing- lenguaje de programacion basado en java- simplificacion de java basado en graficos 
+consola= que la maquina hable humano
+print= imprimir
+ejemplo:
+print ("hola mundo")
+//los // antes de los comentarios son para los humanos, la quina los salta en general con //
+print - funcion
+funcion ( argumento) todos se escriben asi
+x es el argumento de la funcion, las comillas muestral literal la palabra.guarda una info
+
+// cada linea se cierra con ;, punto y coma siempre.
+las variables son numeros o datos
+se crean definiendo siempre primero
+el tiempo variable.
+el tipo de variable es un contenedor 
+// para crear caracteres uso la variable char
+char letra = ´a´
+// una variable 
+una variable guarda una info
+* si quiero usar palabras debo usar *string*
+char no sirve para los numeros
+para los numeros existen otro tipo de variables
+int para numeros enteros
+ejm
+int a = 21;
+existe otro tipo de variable numerica
+float es un numero de punto flotante, osea tiene comas
+ejem
+float nota cat = 6,1
+print ("in"); salto de linea dificil
+pintln (); salto de linea facil
+*para hacer mensajes complejos
+ejemplo:
+para imprimir " la mota de gato es 6,1
+println ();
+print ( " la nota de gato es " + nota gato")
++ para sumar a la cadena
+     - segunda mitad e la clase-
+para hacer una linea en processing, utilizamos la funcion llamada line , donde debo decir:
+ejemplo
+documentacion = codigos processing
+la cordenada x e y de un extremo, y la cordenada del otro se declara line (x1, y1, x2, y2);
+line (10,20, 80,60);
+para hacer lineas curvas
+funcion bezier
+se puede ajustar el tamaño del lienzo
+size (400,600);
+para definir un color de fondo
+si solo tiene 1 argumento,esta en escala de grises
+background (200);
+* si quiero que las lineas aparescan adelante; se debe crear despues de pintar el fondo.
+- para inlcuir texto:
+se utiliza la funcion text()
+ejemplo:
+text("hola", 300,500);
+para ajustar el tamaño del texto debo hacerlo antes de escribir con teztsize
+textsize (30)
+fill (0); // relleno negro
+
+text ( " saludos terricolas", 150,500);
+-
+void setup (){
+void draw (){
+funciones complejas
+setup (); - 1 vez
+draw - interaccion -, cuando se ejecuta, vuelve.
+opcion auto formato 
+todo ordenadito.
+- las variables se suelen crear antes del setup
+println (cantidad);
+text ("los envio"+ cantidad + "saludos" 30, 530);
+framecount = cuenta frame por segundo.
+el framerate es por defecto 60
+primitivas = formas basicas.
+para hacer en processing.
+si quieren rgb - declsro 3
+proxima entrgea 
+generar afiche, con movimiento y palabras 
+investigar variables 
+tipo string para escribir frases
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
