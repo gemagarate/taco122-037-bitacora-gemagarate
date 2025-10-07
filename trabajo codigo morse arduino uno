@@ -1,0 +1,90 @@
+// Código Morse funcional para Arduino UNO
+// Frase: "a 24 hours phone fantasy call 569 425534822"
+
+int ledPin = 13;        // Pin del LED
+int dotTime = 200;      // Duración base del punto (ms)
+
+String message = "a 24 hours phone fantasy call 569 425534822";
+
+// Función que devuelve el código Morse de un carácter
+String morseCode(char c) {
+  c = tolower(c);
+  switch (c) {
+    case 'a': return ".-";
+    case 'b': return "-...";
+    case 'c': return "-.-.";
+    case 'd': return "-..";
+    case 'e': return ".";
+    case 'f': return "..-.";
+    case 'g': return "--.";
+    case 'h': return "....";
+    case 'i': return "..";
+    case 'j': return ".---";
+    case 'k': return "-.-";
+    case 'l': return ".-..";
+    case 'm': return "--";
+    case 'n': return "-.";
+    case 'o': return "---";
+    case 'p': return ".--.";
+    case 'q': return "--.-";
+    case 'r': return ".-.";
+    case 's': return "...";
+    case 't': return "-";
+    case 'u': return "..-";
+    case 'v': return "...-";
+    case 'w': return ".--";
+    case 'x': return "-..-";
+    case 'y': return "-.--";
+    case 'z': return "--..";
+    case '1': return ".----";
+    case '2': return "..---";
+    case '3': return "...--";
+    case '4': return "....-";
+    case '5': return ".....";
+    case '6': return "-....";
+    case '7': return "--...";
+    case '8': return "---..";
+    case '9': return "----.";
+    case '0': return "-----";
+    case ' ': return " ";
+    default: return "";
+  }
+}
+
+// Envía una letra en Morse
+void sendMorse(String code) {
+  for (int i = 0; i < code.length(); i++) {
+    if (code[i] == '.') {
+      digitalWrite(ledPin, HIGH);
+      delay(dotTime);
+      digitalWrite(ledPin, LOW);
+    } else if (code[i] == '-') {
+      digitalWrite(ledPin, HIGH);
+      delay(dotTime * 3);
+      digitalWrite(ledPin, LOW);
+    }
+    delay(dotTime); // pausa entre símbolos
+  }
+}
+
+void setup() {
+  pinMode(ledPin, OUTPUT);
+  delay(1000); // pequeña pausa antes de iniciar
+}
+
+void loop() {
+  for (int i = 0; i < message.length(); i++) {
+    char c = message[i];
+    if (c == ' ') {
+      delay(dotTime * 7); // pausa entre palabras
+    } else {
+      String code = morseCode(c);
+      sendMorse(code);
+      delay(dotTime * 3); // pausa entre letras
+    }
+  }
+
+  delay(5000); // espera antes de repetir la frase
+}
+
+// el siguiente codigo fue creado con la ayuda de chat gpt :(.
