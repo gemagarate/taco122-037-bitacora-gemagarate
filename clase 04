@@ -1,0 +1,44 @@
+ en esta clase no estuve presente por lo cual las siguientes notas, seran en base a las grabaciones de la clase:
+el profesor nos explica lo que es una protoboard
+es una superficie que tiene muchas interconexiones subterraneas.
+la protoboard conecta 6 regiones
+de 2 estructuras distintas.
+el profesor enseña como utilizar la protoboard, conectando un led y una resistencia.
+las columnas del protoboard son agnosticas.
+los numeros dan igual, solo importa la conexion.
+para representar el negativo el profe da la opcion de utilizar un cable oscuro o de color tierra.
+para dar un negativo al arduino debo tirar otro cable en negativo hacia el gnd
+se utiliza positivo arriba y negativo abajo
+para mantener el orden.
+en el ejemplo de conexiones
+tira una vertical a la resistencia en la patita n 13
+y si el arduino esta conectado al pc comienzan a notarse cosas
+
+las protoboard mas grandes aveces no estan interconectadas, oara utilizar toda la protoboard se deben hacer conexiones para que quede todo interconectado, eso depende de la suerte de la protoboard,
+el potenciometro como funciona- es una maquina que tiene carbon dentro, en el cual con una perilla puedes seleccionar la resistenia, tambien se llama resistencia variable.
+el porcentaje, se transforma en voltaje, conectado al arduino.
+un extremo del potenciometro debe ir a tierra en negativo y no postivo en la protoboard y otro positivo en el arduino.
+ejemplo nuevo codigo:
+// se le dira al arduino donde esta nuestro potenciometro.
+int potPin= A0; // siemre que llamemos potPin lamaremos a A0.
+
+void setup()
+{ 
+serial.begin(9600);
+eso permitira que podamos imprimir en la consola
+en void lopp ()
+{ 
+pondremos:
+serial.pintln("hola tu");
+
+              SEGUNDA PARTE CLASE
+
+
+
+
+
+
+
+
+
+
